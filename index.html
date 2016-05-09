@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="es">
+ <head>
+   <title>Backbone Cellar</title>
+   <link rel="stylesheet" href="css/styles.css"/>
+ </head>
+ <body>
+    <div id="header"><span class="title">Backbone Cellar</span></div> 
+    <div id="sidebar"></div>
+    <div id="content">
+      <h2>Welcome to Backbone Cellar</h2>
+      <p>This is a sample application part of of three-part tutorial showing how to build a CRUD application with Backbone.js.</p>
+    </div>
+    <!--Templates-->
+    <script id="tpl-wine-list-item" type="text/template">
+      <a href="#wines/<%=id%>"><%= name %></a>
+    </script>
+    <script id="tpl-wine-details" type="text/template">
+      <div class="form-left-col">
+      <label for="wineId">Id:</label>
+      <input type="text" id="wineId" name="id" value="<%=id%>" disabled>
+      <label for="name">Name</label>
+      <input type="text" id="name" name value="<%=name%>" required>
+      <label for="grapes">Grapes:</label>
+      <input type="text" id="grapes" name="grapes" value="<%=grapes%>">
+      <label for="country">Country:</label>
+      <input type="text" id="country" name="country" value="<%=country%>">
+      <label for="region">Region:</label>
+      <input type="text" id="region" name="region" value="<%=region%>">
+      <label for="year">Year:</label>
+      <input type="text" id="year" name="year" value="<%=year%>">
+    </div>
+    <div class="form-right-col">
+      <img src="pics/<%= picture%>" alt="pic" height="300">     
+      <label for="description">Notes:</label>
+      <textarea name="description" id="description">
+        <%=description%>
+      </textarea>
+    </div>  
+    </script>
+    <script src="lib/jquery-1.7.1.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/backbone-min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+   
+ </body>
+    
+    
+
+</html>
